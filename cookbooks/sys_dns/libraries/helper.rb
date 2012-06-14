@@ -219,6 +219,14 @@ EOF
         result
       end
     end #class CloudDNS < DNS
-
+    
+    class UltraDNS < DNS
+      def action_set(id, user, password, address, options = {})
+        # Generating A Record update query and sending the update request
+        result = `/usr/bin/ruby /opt/rightscale/dns/ultradns_update_record.rb -i #{id}  -u "#{user}" -p "#{password}" -a #{address}`
+        # Checking the result
+          result
+        end
+   end #class UltraDNS < DNS
   end
 end
