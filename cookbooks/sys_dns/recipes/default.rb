@@ -36,7 +36,7 @@ cookbook_file "/opt/rightscale/dns/dnscurl.pl" do
 end
 
 cookbook_file "/opt/rightscale/dns/ultradns_update_record.rb" do
-  source "ultradns_update_record"
+  source "ultradns_update_record.rb"
   owner "root"
   group "root"
   mode "0755"
