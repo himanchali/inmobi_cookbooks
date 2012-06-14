@@ -14,7 +14,7 @@ attribute "sys_dns/choice",
   :display_name => "DNS Service Provider",
   :description => "The name of your DNS provider. Select the DNS provider that you're using to manage the DNS A records of your master/slave database servers (e.g., DNSMadeEasy, DynDNS, Route53, CloudDNS). You must specify the region when using CloudDNS.",
   :required => "required",
-  :choice => ["DNSMadeEasy", "DynDNS", "Route53", "CloudDNS"],
+  :choice => ["DNSMadeEasy", "DynDNS", "Route53", "CloudDNS","UltraDNS"],
   :recipes => ["sys_dns::do_set_private", "sys_dns::default"]
 
 attribute "sys_dns/id",
